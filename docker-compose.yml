@@ -3,7 +3,7 @@ services:
   pytorch-app:
     runtime: nvidia
     build:
-      context: .  # Путь к директории, содержащей Dockerfile
-      dockerfile: Dockerfile  # Название вашего Dockerfile
+      context: .  
+      dockerfile: 
     ports:
-      - "80:80"  # Проброс порта контейнера на хост
+      - "80:80"  
