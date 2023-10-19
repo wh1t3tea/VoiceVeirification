@@ -3,6 +3,7 @@ import torch
 from speechbrain.pretrained import SpeakerRecognition
 import os
 from data_preparation import get_wav_from_mp3
+from speechbrain.pretrained import EncoderClassifier
 
 verificated_voice = librosa.load('verificated_voice/Голос.mp3', sr=16000)
 
@@ -12,8 +13,7 @@ for filename in os.listdir('test_data'):
     wav, sr = librosa.load(f'test_data/{filename}', sr=16000)
     valid_data.append(wav)
 
-classifier = SpeakerRecognition.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb",
-                                             savedir="pretrained_models/spkrec-ecapa-voxceleb")
+classifier = EncoderClassifier.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb")
 
 predictions = []
 
