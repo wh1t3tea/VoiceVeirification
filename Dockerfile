@@ -17,4 +17,4 @@ COPY verificated_voice /app/verificated_voice
 
 WORKDIR /app
 
-CMD ["uvicorn", "endpoint:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "endpoint:app", "--host", "localhost", "--port", "80"]
