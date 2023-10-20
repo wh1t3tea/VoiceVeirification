@@ -4,6 +4,6 @@ services:
     runtime: nvidia
     build:
       context: .  
-      dockerfile: 
+      dockerfile: Dockerfile
     ports:
       - "80:80"  
